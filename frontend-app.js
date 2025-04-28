@@ -1,0 +1,56 @@
+// Project structure:
+// /
+// ├── components/
+// │   ├── LoginForm.js
+// │   ├── MapInterface.js
+// │   ├── Navigation.js
+// │   └── ForecastDisplay.js
+// ├── pages/
+// │   ├── _app.js
+// │   ├── index.js
+// │   ├── login.js
+// │   └── dashboard.js
+// ├── lib/
+// │   └── auth.js
+// ├── styles/
+// │   └── globals.css
+// ├── package.json
+// └── next.config.js
+
+// package.json
+{
+  "name": "inventory-forecast-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "leaflet": "^1.9.4",
+    "next": "14.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "recharts": "^2.10.0",
+    "js-cookie": "^3.0.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "eslint": "^8.53.0",
+    "eslint-config-next": "14.0.3"
+  }
+}
+
+// next.config.js
+module.exports = {
+  reactStrictMode: true,
+  env: {
+    API_URL: process.env.API_URL || 'http://localhost:8000',
+  }
+}
