@@ -1,0 +1,38 @@
+
+  // launch.json
+  {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: FastAPI",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": ["app.main:app", "--reload", "--port", "8000"],
+        "cwd": "${workspaceFolder}/backend",
+        "justMyCode": true
+      },
+      {
+        "name": "Next.js: Frontend",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run", "dev"],
+        "cwd": "${workspaceFolder}/frontend",
+        "console": "integratedTerminal"
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Full Stack",
+        "configurations": [
+          {
+            "name": "Python: FastAPI"
+          },
+          {
+            "name": "Next.js: Frontend"
+          }
+        ]
+      }
+    ]
+  }

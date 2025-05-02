@@ -1,0 +1,37 @@
+distribyte/
+├── backend/               # Python FastAPI backend
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py        # renamed from forecast-api.py
+│   │   ├── models.py      # data models
+│   │   ├── auth.py        # authentication logic
+│   │   └── ml/            # machine learning models
+│   │       └── __init__.py
+│   ├── requirements.txt
+│   └── .env.example
+├── frontend/           
+│   ├── components/
+│   │   ├── LoginForm.js
+│   │   ├── MapInterface.js
+│   │   ├── Navigation.js
+│   │   └── ForecastDisplay.js
+│   ├── lib/
+│   │   └── auth.js
+│   ├── pages/
+│   │   ├── _app.js
+│   │   ├── index.js
+│   │   ├── login.js
+│   │   └── dashboard.js
+│   ├── styles/
+│   │   └── globals.css
+│   ├── public/
+│   ├── package.json
+│   ├── next.config.js
+│   └── .env.local.example
+├── .vscode/              
+│   ├── settings.json
+│   ├── extensions.json
+│   ├── tasks.json
+│   └── launch.json
+├── README.md
+└── .gitignore

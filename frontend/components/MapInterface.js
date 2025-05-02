@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-export default function MapInterface({ onSelectCenter }) {
+export function MapInterface({ onSelectCenter }) {
   const [centers, setCenters] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -145,7 +145,7 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export { DistriByte };
 
 // pages/index.js
 import { useEffect } from 'react';
@@ -181,4 +181,6 @@ import LoginForm from '../components/LoginForm';
 import Head from 'next/head';
 
 export default function Login() {
-  const { isAuthenticated, loading
+  const { isAuthenticated, loading } = useAuth();
+  const router = useRouter();
+  const { error } = router.query;}

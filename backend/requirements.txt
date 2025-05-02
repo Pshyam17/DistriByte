@@ -1,0 +1,30 @@
+// backend/requirements.txt
+fastapi==0.103.1
+uvicorn==0.23.2
+pydantic==2.4.2
+python-jose==3.3.0
+passlib==1.7.4
+python-dotenv==1.0.0
+bcrypt==4.0.1
+python-multipart==0.0.6
+torch==2.1.0
+numpy==1.26.0
+pandas==2.1.1
+
+// backend/.env.example
+SECRET_KEY=yoursecretkey
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+// frontend/.env.local.example
+API_URL=http://localhost:8000
+
+// frontend/.eslintrc.js
+module.exports = {
+  extends: ['next/core-web-vitals', 'eslint:recommended'],
+  rules: {
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'react/no-unescaped-entities': 'off',
+    'react/display-name': 'off',
+  },
+};
