@@ -1,25 +1,5 @@
-// Project structure:
-// /
-// ├── components/
-// │   ├── LoginForm.js
-// │   ├── MapInterface.js
-// │   ├── Navigation.js
-// │   └── ForecastDisplay.js
-// ├── pages/
-// │   ├── _app.js
-// │   ├── index.js
-// │   ├── login.js
-// │   └── dashboard.js
-// ├── lib/
-// │   └── auth.js
-// ├── styles/
-// │   └── globals.css
-// ├── package.json
-// └── next.config.js
-
-// package.json
 {
-  "name": "Distribyte",
+  "name": "distribyte",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -44,13 +24,5 @@
     "tailwindcss": "^3.3.5",
     "eslint": "^8.53.0",
     "eslint-config-next": "14.0.3"
-  }
-}
-
-// next.config.js
-module.exports = {
-  reactStrictMode: true,
-  env: {
-    API_URL: process.env.API_URL || 'http://localhost:8000',
   }
 }
